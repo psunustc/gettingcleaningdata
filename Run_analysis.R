@@ -1,7 +1,8 @@
-# url <-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-# download.file(url = url, destfile = "./data.zip", method = "curl")
-# unzip("./data.zip", exdir="./")
 Run_analysis<-function(){
+    # url <-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+    # download.file(url = url, destfile = "./data.zip", method = "curl")
+    # unzip("./data.zip", exdir="./")
+    if(! "./UCI HAR Dataset" %in% list.dirs(".", recursive = F))stop("Can't find the Samsung dataset!")
     # step 2,3: load and extract
     ##subject data
     subjectID <- rbind(read.table("UCI HAR Dataset/train/subject_train.txt"), 
